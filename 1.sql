@@ -1,5 +1,6 @@
+CREATE DATABASE IF NOT EXISTS uts_basisdata_kel3;
+USE uts_basisdata_kel3;
 
--- Tabel Induk 1
 CREATE TABLE pengguna (
   id_pengguna VARCHAR(10) PRIMARY KEY,
   nama VARCHAR(100) NOT NULL,
@@ -7,13 +8,11 @@ CREATE TABLE pengguna (
   status_aktif VARCHAR(10) NOT NULL
 );
 
--- Tabel Induk 2
 CREATE TABLE pintu (
   id_pintu VARCHAR(10) PRIMARY KEY,
   status_pintu VARCHAR(20) NOT NULL
 );
 
--- Tabel Transaksi (2 FOREIGN KEY)
 CREATE TABLE log_akses (
   id_akses VARCHAR(10) PRIMARY KEY,
   waktu_akses TIMESTAMP NOT NULL,
